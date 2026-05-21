@@ -745,27 +745,34 @@ footer {
             <span class="contact-link-val">+7 (925) 217-79-69</span>
           </div>
         </a>
-        <a href="mailto:manastasya@mail.ru" class="contact-link">
+        <a href="mailto:arsenteva.audit@mail.ru" class="contact-link">
           <div class="contact-link-icon">✉️</div>
           <div>
             <span class="contact-link-label">E-mail</span>
-            <span class="contact-link-val">manastasya@mail.ru</span>
+            <span class="contact-link-val">arsenteva.audit@mail.ru</span>
           </div>
         </a>
+        <a href="https://t.me/cvikken" class="contact-link" target="_blank" rel="noopener">
+          <div class="contact-link-icon">✈️</div>
+          <div>
+            <span class="contact-link-label">Telegram</span>
+            <span class="contact-link-val">@cvikken</span>
+            </div>
+            </a>
       </div>
     </div>
     <div class="contact-right">
       <h3>Оставить заявку</h3>
-      <form onsubmit="return false;">
+      <form action="https://formspree.io/f/XXXXX" method="POST">
         <div class="form-group">
-          <input type="text" placeholder="Ваше имя">
+          <input type="text" name="name" required placeholder="Ваше имя">
         </div>
         <div class="form-group">
-          <input type="tel" placeholder="Телефон">
+          <input type="tel" name="phone" required placeholder="Телефон">
         </div>
         <div class="form-group">
-          <textarea placeholder="Кратко опишите задачу"></textarea>
-        </div>
+          <textarea name="message" placeholder="Кратко опишите задачу"></textarea>
+        </div><input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off"><input type="hidden" name="_subject" value="Заявка с сайта">
         <button type="submit" class="btn-submit">Отправить заявку</button>
       </form>
     </div>
