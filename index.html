@@ -3,7 +3,16 @@
 <html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Арсентьева Анастасия — Согласование перепланировок</title>
+<title>Арсентьева Анастасия — Согласование перепланировок в Москве и МО</title>
+<meta name="description" content="Сопровождение согласования перепланировки квартир в Москве и Московской области. Подготовка документов, подача в МЖИ, ведение процесса. Опыт с 2018 года.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://арсентьева-консалт.рф/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="Арсентьева Анастасия — Согласование перепланировок">
+<meta property="og:description" content="Сопровождение согласования перепланировки квартир в Москве и МО.">
+<meta property="og:url" content="https://арсентьева-консалт.рф/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='10' fill='%23F97B3A'/><text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='Georgia,serif' font-size='32' font-weight='400' fill='white'>АА</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
@@ -572,6 +581,24 @@ footer {
   letter-spacing: 1px;
 }
 
+.footer-legal { flex-basis: 100%; text-align: center; font-size: 10px; color: rgba(255,255,255,0.25); letter-spacing: 0.6px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.05); line-height: 1.5; }
+.form-consent { display: flex; align-items: flex-start; gap: 10px; margin: 0 0 14px; font-size: 12px; line-height: 1.55; color: rgba(255,255,255,0.55); cursor: pointer; user-select: none; }
+.form-consent input[type='checkbox'] { margin-top: 3px; width: 14px; height: 14px; accent-color: var(--orange); cursor: pointer; flex-shrink: 0; }
+.privacy-link { color: var(--orange); text-decoration: underline; cursor: pointer; background: none; border: none; font: inherit; padding: 0; }
+.privacy-link:hover { color: #FFB58A; }
+.privacy-modal { position: fixed; inset: 0; background: rgba(45,30,20,0.7); display: flex; align-items: center; justify-content: center; z-index: 1000; padding: 20px; overflow-y: auto; }
+.privacy-modal[hidden] { display: none; }
+.privacy-content { background: white; max-width: 600px; width: 100%; padding: 44px 40px 32px; position: relative; max-height: 85vh; overflow-y: auto; }
+.privacy-close { position: absolute; top: 10px; right: 14px; background: none; border: none; font-size: 28px; color: var(--muted); cursor: pointer; line-height: 1; padding: 4px 10px; transition: color 0.2s; }
+.privacy-close:hover { color: var(--orange); }
+.privacy-content h3 { font-family: 'Playfair Display', serif; font-size: 24px; color: var(--dark); margin-bottom: 20px; font-weight: 400; }
+.privacy-content p { font-size: 13px; line-height: 1.7; color: var(--text); margin-bottom: 14px; font-weight: 300; }
+.privacy-content p strong { color: var(--dark); font-weight: 500; }
+.privacy-content a { color: var(--orange); text-decoration: underline; }
+body { overflow-x: hidden; }
+footer { flex-wrap: wrap; gap: 12px; }
+.stat-num { word-break: break-word; }
+
 /* ANIMATIONS */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(24px); }
@@ -773,6 +800,7 @@ footer {
         <div class="form-group">
           <textarea name="message" placeholder="Кратко опишите задачу"></textarea>
         </div><input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off"><input type="hidden" name="_subject" value="Заявка с сайта">
+        <label class="form-consent"><input type="checkbox" name="consent" required><span>Я соглашаюсь на обработку персональных данных в соответствии с <button type="button" class="privacy-link" data-open-privacy>политикой конфиденциальности</button></span></label>
         <button type="submit" class="btn-submit">Отправить заявку</button>
       </form>
     </div>
@@ -782,8 +810,11 @@ footer {
 <footer>
   <div class="footer-name">Арсентьева Анастасия</div>
   <div class="footer-copy">© 2026 · Согласование перепланировок · Москва и МО</div>
+  <div class="footer-legal">Арсентьева Анастасия Сергеевна · Самозанятый · ИНН: 773390836005</div>
 </footer>
 
 
 
+<div class="privacy-modal" id="privacy" hidden role="dialog" aria-modal="true" aria-labelledby="privacy-title"><div class="privacy-content"><button type="button" class="privacy-close" aria-label="Закрыть" data-close-privacy>×</button><h3 id="privacy-title">Политика обработки персональных данных</h3><p><strong>Оператор:</strong> Арсентьева Анастасия Сергеевна, самозанятый, ИНН 773390836005.</p><p><strong>Собираемые данные:</strong> имя и номер телефона, которые вы оставляете в форме заявки на сайте.</p><p><strong>Цель обработки:</strong> обратная связь с вами по запросу о согласовании перепланировки.</p><p><strong>Передача третьим лицам:</strong> данные не передаются третьим лицам, за исключением случаев, прямо предусмотренных законодательством Российской Федерации.</p><p><strong>Срок хранения:</strong> данные хранятся до момента отзыва вашего согласия.</p><p><strong>Отзыв согласия и удаление данных:</strong> направьте запрос на <a href="mailto:arsenteva.audit@mail.ru">arsenteva.audit@mail.ru</a> — данные будут удалены в течение 30 дней.</p><p><strong>Контакт:</strong> <a href="mailto:arsenteva.audit@mail.ru">arsenteva.audit@mail.ru</a></p></div></div>
+<script>(function(){var m=document.getElementById('privacy');if(!m)return;function o(e){e.preventDefault();m.hidden=false;document.body.style.overflow='hidden';}function c(){m.hidden=true;document.body.style.overflow='';}document.querySelectorAll('[data-open-privacy]').forEach(function(el){el.addEventListener('click',o);});document.querySelectorAll('[data-close-privacy]').forEach(function(el){el.addEventListener('click',c);});m.addEventListener('click',function(e){if(e.target===m)c();});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden)c();});})();</script>
 </body></html>
