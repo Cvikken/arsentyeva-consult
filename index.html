@@ -792,7 +792,7 @@ footer { flex-wrap: wrap; gap: 12px; }
     </div>
     <div class="contact-right">
       <h3>Оставить заявку</h3>
-      <form id="contact-form" novalidate>
+      <form id="contact-form">
         <div class="form-group">
           <input type="text" name="from_name" required placeholder="Ваше имя">
         </div>
@@ -818,5 +818,5 @@ footer { flex-wrap: wrap; gap: 12px; }
 
 
 
-<script>document.getElementById('contact-form').addEventListener('submit',function(e){e.preventDefault();var b=this.querySelector('button[type=submit]'),t=b.textContent,f=this;b.disabled=true;b.textContent='Отправляем...';var d={from_name:f.from_name.value,name:f.from_name.value,phone:f.phone.value,message:'Телефон: '+f.phone.value+'\n\n'+(f.message.value||'(сообщение не указано)')};emailjs.send('service_skq7bpf','template_qjxvfxd',d).then(function(){b.textContent='Заявка отправлена ✓';b.style.background='#5BAD5B';f.reset();}).catch(function(){b.textContent='Ошибка — попробуйте ещё раз';b.disabled=false;});});</script>
+<script>document.getElementById('contact-form').addEventListener('submit',function(e){e.preventDefault();var f=this,b=f.querySelector('button[type=submit]'),n=(f.from_name.value||'').trim(),p=(f.phone.value||'').trim(),m=(f.message.value||'').trim(),c=f.consent.checked;function r(t){b.textContent=t;b.style.background='';setTimeout(function(){b.textContent='Отправить заявку';},3500);}if(!c){r('Нужно согласие на обработку данных');return;}if(!n){r('Укажите ваше имя');f.from_name.focus();return;}if(!p){r('Укажите телефон');f.phone.focus();return;}b.disabled=true;b.textContent='Отправляем...';emailjs.send('service_skq7bpf','template_qjxvfxd',{from_name:n,name:n,phone:p,message:'Телефон: '+p+'\n\n'+(m||'(сообщение не указано)')}).then(function(){b.textContent='Заявка отправлена ✓';b.style.background='#5BAD5B';f.reset();}).catch(function(){b.textContent='Ошибка — попробуйте ещё раз';b.disabled=false;});});</script>
 </body></html>
