@@ -854,7 +854,7 @@ footer { flex-wrap: wrap; gap: 12px; }
       <h2>Давайте<br><em>обсудим</em><br>вашу задачу</h2>
       <p>Напишите или позвоните — расскажу что возможно в вашем случае и сколько это будет стоить. Консультация бесплатно.</p>
       <div class="contact-links">
-        <a href="tel:+79252177969" class="contact-link">
+        <a href="tel:+79252177969" class="contact-link" onclick="ym(109423563,'reachGoal','phone_click')">
           <div class="contact-link-icon">📞</div>
           <div>
             <span class="contact-link-label">Телефон</span>
@@ -912,7 +912,7 @@ footer { flex-wrap: wrap; gap: 12px; }
 
 
 
-<script>document.getElementById('contact-form').addEventListener('submit',function(e){e.preventDefault();var f=this,b=f.querySelector('button[type=submit]'),n=(f.from_name.value||'').trim(),p=(f.phone.value||'').trim(),m=(f.message.value||'').trim(),c=f.consent.checked;function r(t){b.textContent=t;b.style.background='';setTimeout(function(){b.textContent='Отправить заявку';},3500);}if(!c){r('Нужно согласие на обработку данных');return;}if(!n){r('Укажите ваше имя');f.from_name.focus();return;}if(!p){r('Укажите телефон');f.phone.focus();return;}b.disabled=true;b.textContent='Отправляем...';emailjs.send('service_skq7bpf','template_qjxvfxd',{from_name:n,name:n,phone:p,message:'Телефон: '+p+'\n\n'+(m||'(сообщение не указано)')}).then(function(){b.textContent='Заявка отправлена ✓';b.style.background='#5BAD5B';f.reset();}).catch(function(){b.textContent='Ошибка — попробуйте ещё раз';b.disabled=false;});});</script>
+<script>document.getElementById('contact-form').addEventListener('submit',function(e){e.preventDefault();var f=this,b=f.querySelector('button[type=submit]'),n=(f.from_name.value||'').trim(),p=(f.phone.value||'').trim(),m=(f.message.value||'').trim(),c=f.consent.checked;function r(t){b.textContent=t;b.style.background='';setTimeout(function(){b.textContent='Отправить заявку';},3500);}if(!c){r('Нужно согласие на обработку данных');return;}if(!n){r('Укажите ваше имя');f.from_name.focus();return;}if(!p){r('Укажите телефон');f.phone.focus();return;}b.disabled=true;b.textContent='Отправляем...';emailjs.send('service_skq7bpf','template_qjxvfxd',{from_name:n,name:n,phone:p,message:'Телефон: '+p+'\n\n'+(m||'(сообщение не указано)')}).then(function(){b.textContent='Заявка отправлена ✓';b.style.background='#5BAD5B';f.reset();ym(109423563,'reachGoal','form_submit');}).catch(function(){b.textContent='Ошибка — попробуйте ещё раз';b.disabled=false;});});</script>
 </body></html>
 
 <!-- redeploy trigger --> 
