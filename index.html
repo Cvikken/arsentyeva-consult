@@ -637,7 +637,7 @@ footer { flex-wrap: wrap; gap: 12px; }
   .hero-left { padding: 60px 32px; }
   .stats { grid-template-columns: 1fr; }
   .stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); }
-  .stat-num { font-size: 36px; }
+  .stat-num { font-size: 32px; }
     .services { padding: 60px 32px; }
   .section-header { grid-template-columns: 1fr; gap: 24px; }
   .services-grid { grid-template-columns: 1fr; }
@@ -651,6 +651,18 @@ footer { flex-wrap: wrap; gap: 12px; }
   .contact-inner { grid-template-columns: 1fr; gap: 40px; }
   footer { flex-direction: column; gap: 12px; padding: 24px 32px; text-align: center; }
 }
+
+@media (min-width: 901px) and (max-width: 1199px) {
+  .stat-num { font-size: 30px; }
+  }
+
+  @media (min-width: 1200px) and (max-width: 1439px) {
+    .stat-num { font-size: 40px; }
+    }
+
+    @media (min-width: 1440px) and (max-width: 1599px) {
+      .stat-num { font-size: 48px; }
+      }
 </style>
 </head>
 <body>
