@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+  <html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Памятка для клиента — Арсентьева Консалт</title>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+    --orange: #F97B3A;
+    --orange-light: #FEF0E8;
+    --orange-dark: #E06A28;
+    --dark: #1E1E1A;
+  --text: #2C2C28;
+  --text-muted: rgba(44,44,40,0.55);
+    --border: rgba(44,44,40,0.1);
+  --bg: #FAFAF8;
+      --white: #ffffff;
+      --red-bg: #FDE8E8;
+      --red: #C0392B;
+      --red-border: #E74C3C;
+      --green-bg: #E8F5EC;
+      --green: #1E7A3A;
+  --green-border: #27AE60;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+  background: var(--bg);
+    color: var(--text);
+  font-size: 13px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ========== ОБЛОЖКА ========== */
+  .cover {
+      min-height: 100vh;
+  padding: 56px 52px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.cover::before {
+    content: '';
+  position: absolute;
+  right: -60px; top: -60px;
+      width: 320px; height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(249,123,58,0.08) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.monogram {
+      width: 48px; height: 48px;
+  border-radius: 50%;
+  background: var(--orange);
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 600;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 40px;
+      flex-shrink: 0;
+  }
+
+    .cover-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--dark);
+  margin-bottom: 20px;
+}
+
+.cover-title span { color: var(--orange); }
+
+  .cover-stripe {
+  width: 52px; height: 3px;
+  background: var(--orange);
+  margin: 20px 0;
+      border-radius: 2px;
+}
+
+    .cover-sub {
+  font-size: 15px;
+    color: var(--text-muted);
+  max-width: 400px;
+  line-height: 1.65;
+  font-weight: 300;
+}
+
+.cover-footer {
+  border-top: 1px solid var(--border);
+      padding-top: 20px;
+  margin-top: 40px;
+}
+
+.cover-footer p {
+    font-size: 11px;
+      color: rgba(44,44,40,0.4);
+    line-height: 1.8;
+}
+
+    .cover-footer .orange { color: var(--orange); font-weight: 500; }
+
+/* ========== СТРАНИЦЫ ========== */
+.page {
+  padding: 44px 52px 40px;
+}
+
+  .section-tag {
+  font-size: 10px;
+  font-weight: 600;
+    letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-tag::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(249,123,58,0.2);
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+    font-weight: 400;
+  color: var(--dark);
+  line-height: 1.2;
+    margin-bottom: 10px;
+    }
+
+h2 .accent { color: var(--orange); }
+
+.intro {
+      font-size: 13px;
+  color: var(--text-muted);
+      margin-bottom: 24px;
+    font-weight: 300;
+    }
+
+/* ========== ЧЕКЛИСТ ========== */
+.checklist { margin-bottom: 4px; }
+
+.check-item {
+  display: flex;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.check-item:last-child { border-bottom: none; }
+
+.check-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--orange);
+      flex-shrink: 0;
+  margin-top: 5px;
+}
+
+  .check-body strong {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--dark);
+  display: block;
+  margin-bottom: 3px;
+}
+
+.check-body p, .check-body .desc {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.65;
+    font-weight: 300;
+}
+
+.check-body em {
+      font-style: normal;
+  color: rgba(44,44,40,0.4);
+      font-size: 11px;
+}
+
+/* ========== ПРЕДУПРЕЖДЕНИЕ ========== */
+.warn {
+  background: var(--orange-light);
+  border-left: 3px solid var(--orange);
+  padding: 12px 16px;
+  margin-top: 16px;
+  border-radius: 0 4px 4px 0;
+}
+
+.warn p { font-size: 12px; color: #4A2E18; line-height: 1.65; }
+.warn strong { color: var(--orange-dark); font-weight: 600; }
+
+/* ========== ДВЕ КОЛОНКИ ========== */
+.two-col {
+    display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 32px;
+}
+
+.col-divider {
+    border-left: 1px solid var(--border);
+  padding-left: 32px;
+  margin-left: -32px;
+}
+
+/* ========== ТАБЛИЦА ========== */
+.area-table {
+    width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 24px;
+  font-size: 12px;
+}
+
+.area-table thead tr {
+    background: var(--dark);
+}
+
+.area-table th {
+    color: rgba(255,255,255,0.7);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 9px 14px;
+  text-align: left;
+}
+
+.area-table td {
+    padding: 9px 14px;
+  border-bottom: 1px solid var(--border);
+  background: var(--white);
+  vertical-align: middle;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.area-table tr:last-child td { border-bottom: none; }
+.area-table tr:nth-child(even) td { background: #F5F5F2; }
+
+.area-val {
+    font-family: 'Playfair Display', serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--orange);
+  white-space: nowrap;
+                                  }
+
+/* ========== ПРАВИЛА (НЕЛЬЗЯ/МОЖНО) ========== */
+.rules-block { margin-bottom: 14px; }
+
+.rules-head {
+    padding: 9px 14px 9px 14px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+.rules-head.red {
+  background: var(--red-bg);
+  color: var(--red);
+  border-left: 3px solid var(--red-border);
+}
+
+.rules-head.orange {
+  background: var(--orange-light);
+  color: var(--orange-dark);
+  border-left: 3px solid var(--orange);
+}
+
+.rules-head.green {
+  background: var(--green-bg);
+  color: var(--green);
+  border-left: 3px solid var(--green-border);
+}
+
+.rule-row {
+    display: flex;
+  gap: 10px;
+  padding: 8px 14px;
+  border-bottom: 1px solid rgba(44,44,40,0.05);
+  background: var(--white);
+  align-items: baseline;
+}
+
+.rule-row:last-child { border-bottom: none; }
+
+  .rule-n {
+    font-size: 10px;
+  font-weight: 700;
+  color: rgba(44,44,40,0.25);
+  width: 16px;
+  flex-shrink: 0;
+  padding-top: 1px;
+}
+
+.rule-t {
+    font-size: 12px;
+  color: var(--text);
+  line-height: 1.55;
+}
+
+.rule-t em {
+    font-style: normal;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* ========== ФИНАЛЬНАЯ СТРАНИЦА ========== */
+.final {
+  background: var(--dark);
+  padding: 56px 52px;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.final h2 {
+    color: #fff;
+    font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.final .sub {
+  font-size: 14px;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 36px;
+  font-weight: 300;
+}
+
+.contact-row {
+    display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.contact-row:last-of-type { border-bottom: none; }
+
+  .contact-label {
+    font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+    width: 80px;
+  flex-shrink: 0;
+}
+
+.contact-val {
+    font-size: 14px;
+  color: var(--orange);
+  font-weight: 400;
+}
+
+.final-footer {
+    margin-top: 36px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  font-size: 10px;
+  color: rgba(255,255,255,0.18);
+}
+
+/* ========== PRINT ========== */
+@media print {
+    @page { margin: 0; size: A4; }
+  body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .cover { page-break-after: always; min-height: 100vh; }
+  .page { page-break-inside: avoid; }
+  .final { page-break-before: always; }
+  .rules-block { page-break-inside: avoid; }
+  .two-col { page-break-inside: avoid; }
+  .area-table { page-break-inside: avoid; }
+}
+
+/* Разделители между секциями на экране */
+.page + .page { border-top: 2px solid var(--border); }
+</style>
+  </head>
+  <body>
+
+  <!-- ОБЛОЖКА -->
+  <div class="cover">
+    <div>
+      <div class="monogram">АА</div>
+      <div class="cover-title">Памятка<br>для клиента:<br><span>ремонт и согласование</span><br>перепланировки</div>
+      <div class="cover-stripe"></div>
+      <p class="cover-sub">Что важно сделать правильно с первого раза — от старта ремонта до получения финальных документов.</p>
+    </div>
+    <div class="cover-footer">
+      <p>Арсентьева Анастасия · Согласование перепланировок · Москва и МО</p>
+      <p class="orange">арсентьева-консалт.рф · @cvikken · +7 (925) 217-79-69</p>
+    </div>
+  </div>
+
+  <!-- ЧАСТЬ 1 -->
+  <div class="page">
+    <div class="section-tag">Часть 1 · Перед ремонтом</div>
+    <h2>Три вещи, которые нужно проверить<br>до начала <span class="accent">ремонтных работ</span></h2>
+    <p class="intro">Ошибки, допущенные до старта ремонта, обходятся дороже всего — и по деньгам, и по времени.</p>
+
+    <div class="checklist">
+      <div class="check-item">
+        <div class="check-dot"></div>
+        <div class="check-body">
+          <strong>Убедиться, что у строительной бригады есть допуск СРО</strong>
+          <p>МЖИ требует договор подряда с актуальной выпиской из реестра СРО. Проверить можно на reestr.nostroy.ru по ИНН — статус должен быть «является членом». Без этого акты на скрытые работы не будут приняты.</p>
+        </div>
+      </div>
+      <div class="check-item">
+        <div class="check-dot"></div>
+        <div class="check-body">
+          <strong>Запросить планы БТИ соседей сверху и снизу</strong>
+          <p>Возможность расширить санузел, кухню или жилую комнату зависит и от того, что уже согласовано у соседей. Если сосед снизу расширил жилую комнату за счёт коридора — вы не сможете расширить свой санузел в том же месте. МЖИ выдаст отказ. <em>(Не актуально для свежих новостроек.)</em></p>
+        </div>
+      </div>
+      <div class="check-item">
+        <div class="check-dot"></div>
+        <div class="check-body">
+          <strong>Согласовать в МЖИ проект перепланировки перед началом ремонта</strong>
+          <p>В проекте нужно отразить всё: снос и возведение стен, расположение сантехники, плиты и раковины, встроенные шкафы (те, у которых нет хотя бы одной стенки), ниши, подиумы, нестандартные двери. Встроенный шкаф — это помещение, он учитывается в площади.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="warn">
+      <p><strong>Важно:</strong> Перенос кухни возможен только с электрической плитой. Под новой кухней не должно быть жилых комнат соседей снизу, а над ней — санузлов соседей сверху.</p>
+    </div>
+  </div>
+
+  <!-- ЧАСТЬ 2 -->
+  <div class="page">
+    <div class="section-tag">Часть 2 · Во время ремонта</div>
+    <h2>Что сделать <span class="accent">правильно</span><br>в процессе работ</h2>
+    <p class="intro">Технические решения, которые невозможно исправить на финальных этапах ремонта — важно предусмотреть заранее.</p>
+
+    <div class="two-col">
+      <div>
+        <div class="check-item">
+          <div class="check-dot"></div>
+          <div class="check-body">
+            <strong>Гидроизоляция полов</strong>
+            <p>Обязательна в санузлах и на кухне. Если выполнена по всей площади — порожек на входе в санузел не нужен. В остальных случаях порожек или перепад полов не менее 2 см обязателен. Фиксируется актом на скрытые работы до укладки финишного покрытия. Без акта МЖИ не примет документы.</p>
+          </div>
+        </div>
+        <div class="check-item">
+          <div class="check-dot"></div>
+          <div class="check-body">
+            <strong>Шумоизоляция полов</strong>
+            <p>Слой под стяжку — по всей площади квартиры. Фиксируется актом на скрытые работы до заливки стяжки. Без акта МЖИ не примет документы.</p>
+          </div>
+        </div>
+        <div class="check-item">
+          <div class="check-dot"></div>
+          <div class="check-body">
+            <strong>Напольные покрытия</strong>
+            <p>Керамическую и керамогранитную плитку нельзя укладывать в жилых комнатах вашей квартиры — нарушение норм звукоизоляции.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-divider">
+        <div class="check-item">
+          <div class="check-dot"></div>
+          <div class="check-body">
+            <strong>Материал перегородок</strong>
+            <p>Только лёгкие материалы: пеноблок, газоблок, гипсокартон, стеклоблок. Любой тип кирпича запрещён из-за нагрузки на перекрытие.</p>
+          </div>
+        </div>
+        <div class="check-item">
+          <div class="check-dot"></div>
+          <div class="check-body">
+            <strong>Душ-трап</strong>
+            <p>Разрешён при условии, что коммуникации не затрагивают плиту перекрытия.</p>
+          </div>
+        </div>
+        <div class="check-item">
+          <div class="check-dot"></div>
+          <div class="check-body">
+            <strong>Доступ к стоякам</strong>
+            <p>Необходимо предусмотреть люки к стоякам водоснабжения и водоотведения. Доступ к стоякам отопления — на всю высоту. Стояк газа — по всей протяжённости, включая подводку. Только легкосъёмные конструкции. Глухая заделка запрещена.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="warn">
+      <p><strong>Нельзя:</strong> уменьшать размеры вентиляционных и технических коробов — они есть на плане БТИ и являются общедомовым имуществом. Нельзя устанавливать бойлер в общедомовой короб.</p>
+    </div>
+  </div>
+
+  <!-- ЧАСТЬ 3 -->
+  <div class="page">
+    <div class="section-tag">Часть 3 · Ключевые нормы</div>
+    <h2>Минимальные площади<br>и <span class="accent">важные ограничения</span></h2>
+    <p class="intro">Нормы по 508-ПП и действующим сводам правил.</p>
+
+    <table class="area-table">
+      <thead>
+        <tr>
+          <th style="width:32%">Помещение</th>
+          <th style="width:22%">Площадь / размер</th>
+          <th>Примечание</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Жилая комната</td><td class="area-val">от 8 м²</td><td>Минимум для любой жилой комнаты</td></tr>
+        <tr><td>Кухня</td><td class="area-val">от 8 м²</td><td>Перенос кухни возможен только если плита электрическая</td></tr>
+        <tr><td>Кухня-ниша</td><td class="area-val">от 5 м², шир. от 1,9 м</td><td>Как правило, выделяется строительными конструкциями (пристенки), но возможны исключения</td></tr>
+        <tr><td>Зона кухни в кухне-столовой</td><td class="area-val">от 6 м²</td><td>Можно выделить условно в проекте</td></tr>
+        <tr><td>Санузел, коридор, кабинет</td><td class="area-val">любая</td><td>Ограничений по площади нет</td></tr>
+      </tbody>
+    </table>
+
+    <div class="two-col">
+      <div>
+        <div class="check-item">
+          <div class="check-dot"></div>
+          <div class="check-body">
+            <strong>Лоджия и балкон</strong>
+            <p>Объединение с жилой комнатой и разделение балконов/лоджий запрещены. Любые источники тепла на лоджии и балконе запрещены. При демонтаже подоконного блока обязательны двухкамерные стеклопакеты. Утеплитель ограждающих стен допускается заменить только на аналогичный с сохранением толщины — возможность зависит от конструктива дома.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-divider">
+        <div class="check-item">
+          <div class="check-dot"></div>
+          <div class="check-body">
+            <strong>Противопожарный простенок</strong>
+            <p>Не менее 1200–1600 мм со стороны лоджии. Демонтаж разрешён до ~6-го этажа или при установке огнеупорных стеклопакетов.</p>
+          </div>
+        </div>
+        <div class="check-item">
+          <div class="check-dot"></div>
+          <div class="check-body">
+            <strong>Оборудование над жилыми комнатами</strong>
+            <p>Стиральные машины и шумное оборудование нельзя размещать над жилыми комнатами соседей снизу (СП 54.13330.2022).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ЧАСТЬ 4 -->
+  <div class="page">
+    <div class="section-tag">Часть 4 · Частые ошибки</div>
+    <h2>Что приводит<br>к <span class="accent">отказу или повторному кругу</span></h2>
+    <p class="intro">Три уровня риска — от категорического запрета до уточняющих эскизов.</p>
+
+    <div class="rules-head red">Категорически нельзя</div>
+    <div class="rule-row"><span class="rule-num">01</span><p>Переносить кухню на место жилой комнаты, если плита газовая.</p></div>
+    <div class="rule-row"><span class="rule-num">02</span><p>Объединять лоджию/балкон с жилой комнатой или кухней.</p></div>
+    <div class="rule-row"><span class="rule-num">03</span><p>Уменьшать вентиляционные и технические короба общедомового имущества.</p></div>
+    <div class="rule-row"><span class="rule-num">04</span><p>Демонтировать или ослаблять несущие стены и пилоны без проекта усиления, согласованного с автором проекта дома.</p></div>
+    <div class="rule-row"><span class="rule-num">05</span><p>Размещать санузел или кухню над жилыми комнатами нижних соседей (кроме случаев, когда там уже санузел/кухня).</p></div>
+    <div class="rule-row"><span class="rule-num">06</span><p>Устраивать тёплый пол с подключением к общедомовым стоякам отопления.</p></div>
+    <div class="rule-row"><span class="rule-num">07</span><p>Увеличивать нагрузку на перекрытие сверх допустимой без расчёта.</p></div>
+
+    <div class="rules-head orange">Приведёт к повторному кругу согласования</div>
+    <div class="rule-row"><span class="rule-num">01</span><p>Несоответствие фактических размеров помещений минимальным нормам площади.</p></div>
+    <div class="rule-row"><span class="rule-num">02</span><p>Отсутствие в проекте обоснования гидро- и шумоизоляции при переносе мокрых зон.</p></div>
+    <div class="rule-row"><span class="rule-num">03</span><p>Несовпадение проекта с фактическими работами на момент выезда инспектора.</p></div>
+    <div class="rule-row"><span class="rule-num">04</span><p>Отсутствие актов скрытых работ к моменту итоговой проверки.</p></div>
+    <div class="rule-row"><span class="rule-num">05</span><p>Неполный комплект документов от СРО-подрядчика (допуск, договор, акты).</p></div>
+
+    <div class="rules-head green">Нужен уточняющий эскиз</div>
+    <div class="rule-row"><span class="rule-num">01</span><p>Перенос дверных проёмов в несущих перегородках.</p></div>
+    <div class="rule-row"><span class="rule-num">02</span><p>Устройство кухни-ниши нестандартной конфигурации.</p></div>
+    <div class="rule-row"><span class="rule-num">03</span><p>Объединение санузла и коридора без изменения мокрых зон.</p></div>
+    <div class="rule-row"><span class="rule-num">04</span><p>Изменение конфигурации встроенных шкафов и гардеробных.</p></div>
+    <div class="rule-row"><span class="rule-num">05</span><p>Устройство дополнительного тамбура у входной двери.</p></div>
+    <div class="rule-row"><span class="rule-num">06</span><p>Перепланировка в пределах не несущих перегородок без изменения мокрых зон и площадей.</p></div>
+  </div>
+
+  <!-- ЧАСТЬ 5 -->
+  <div class="page">
+    <div class="section-tag">Часть 5 · Финальная приёмка</div>
+    <h2>Документы,<br>которые <span class="accent">нужно подготовить заранее</span></h2>
+    <p class="intro">Без этого комплекта инспектор МЖИ не сможет принять перепланировку.</p>
+
+    <div class="checklist">
+      <div class="check-item">
+        <div class="check-dot"></div>
+        <div class="check-body">
+          <strong>Акт на гидроизоляцию</strong>
+          <p>Составляется подрядчиком с допуском СРО на этапе скрытых работ — до укладки финишных покрытий.</p>
+        </div>
+      </div>
+      <div class="check-item">
+        <div class="check-dot"></div>
+        <div class="check-body">
+          <strong>Акт на шумоизоляцию</strong>
+          <p>Подтверждает соответствие конструкции пола нормативному индексу звукоизоляции.</p>
+        </div>
+      </div>
+      <div class="check-item">
+        <div class="check-dot"></div>
+        <div class="check-body">
+          <strong>Договор подряда с СРО-допуском</strong>
+          <p>Подрядчик должен иметь действующий допуск СРО на момент производства работ — копию нужно сохранить.</p>
+        </div>
+      </div>
+      <div class="check-item">
+        <div class="check-dot"></div>
+        <div class="check-body">
+          <strong>Технический план</strong>
+          <p>Изготавливается кадастровым инженером после завершения работ, на основании итогового проекта.</p>
+        </div>
+      </div>
+      <div class="check-item">
+        <div class="check-dot"></div>
+        <div class="check-body">
+          <strong>Доступ для инспектора МЖИ</strong>
+          <p>Все работы на момент приёмки должны соответствовать проекту — переделки увеличивают срок согласования.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="warn">
+      <p><strong>Важно:</strong> акты скрытых работ нельзя составить постфактум после закрытия конструкций — фиксация делается только в процессе. Если акт не оформлен вовремя, придётся открывать конструкцию повторно.</p>
+    </div>
+  </div>
+
+  <!-- ФИНАЛ -->
+  <div class="page final">
+    <div class="section-tag">Контакты</div>
+    <h2>Остались вопросы?<br><span class="accent">Я помогу разобраться</span></h2>
+    <p class="intro">Арсентьева Консалт — сопровождение перепланировок «под ключ»: от эскиза до итогового технического плана.</p>
+
+    <div class="contact-row"><strong>Телефон</strong><span>+7 (925) 217-79-69</span></div>
+    <div class="contact-row"><strong>Telegram</strong><span>@cvikken</span></div>
+    <div class="contact-row"><strong>E-mail</strong><span>arsenteva.audit@mail.ru</span></div>
+    <div class="contact-row"><strong>Сайт</strong><span>арсентьева-консалт.рф</span></div>
+
+    <p style="margin-top:40px;font-size:12px;color:var(--muted);">ИНН 773390836005</p>
+  </div>
+
+  </body>
+  </html>
+  
