@@ -392,6 +392,8 @@ h2 .accent { color: var(--orange); }
 
 /* Разделители между секциями на экране */
 .page + .page { border-top: 2px solid var(--border); }
+  @media screen and (min-width: 760px) { .cover, .page, .final { max-width: 720px; margin: 0 auto; } }
+  @media screen and (max-width: 600px) { .cover, .page, .final { padding-left: 24px; padding-right: 24px; } .cover-title { font-size: 30px; } h2 { font-size: 22px; } .two-col { grid-template-columns: 1fr; gap: 20px; } .col-divider { border-left: none; border-top: 1px solid var(--border); padding: 20px 0 0; margin: 4px 0 0; } .area-table { display: block; overflow-x: auto; } .area-val { white-space: normal; } }
 </style>
 </head>
 <body>
