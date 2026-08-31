@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://арсентьева-консалт.рф/sitemap.xml
