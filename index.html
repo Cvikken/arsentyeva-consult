@@ -17,13 +17,13 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Согласование перепланировки квартиры в Москве и МО под ключ — Арсентьева Консалт</title>
-<meta name="description" content="Согласование перепланировки квартир в Москве и МО под ключ — от проекта до получения документов. Без вашего участия. Опыт с 2018 года. Консультация бесплатно.">
+<meta name="description" content="Согласование перепланировки квартир в Москве и МО под ключ — от проекта до получения документов. Без вашего участия. Опыт с 2020 года. Консультация бесплатно.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://арсентьева-консалт.рф/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:title" content="Согласование перепланировки квартиры под ключ — Арсентьева Консалт">
-<meta property="og:description" content="Согласование перепланировки квартир в Москве и МО под ключ. От проекта до получения документов — без вашего участия. Опыт с 2018 года.">
+<meta property="og:description" content="Согласование перепланировки квартир в Москве и МО под ключ. От проекта до получения документов — без вашего участия. Опыт с 2020 года.">
 <meta property="og:url" content="https://арсентьева-консалт.рф/">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <script type="application/ld+json">
@@ -86,6 +86,41 @@ body {
   font-weight: 400;
 }
 
+/* TOP BAR */
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 12px 80px;
+  border-bottom: 1px solid rgba(249,123,58,0.2);
+  background: var(--bg);
+}
+
+.top-bar-contacts {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.top-bar-link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.top-bar-link:hover {
+  color: var(--orange);
+}
+
+.top-bar-icon {
+  font-size: 13px;
+  opacity: 0.75;
+}
+
 /* HERO */
 .hero {
   min-height: 100vh;
@@ -107,6 +142,7 @@ body {
   position: relative;
   overflow: hidden;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -135,6 +171,7 @@ body {
   position: relative;
   z-index: 1;
   text-align: center;
+  margin-bottom: 56px;
 }
 
 .hero-monogram-letters {
@@ -646,6 +683,50 @@ body { overflow-x: hidden; }
 footer { flex-wrap: wrap; gap: 12px; }
 .stat-num { word-break: break-word; }
 
+/* QUICK LINKS */
+.quick-links {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+}
+
+.quick-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 16px 4px;
+  border-top: 1px solid rgba(249,123,58,0.18);
+  text-decoration: none;
+  color: var(--dark);
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  transition: padding-left 0.25s ease, color 0.25s ease;
+}
+
+.quick-link:last-child {
+  border-bottom: 1px solid rgba(249,123,58,0.18);
+}
+
+.quick-link:hover {
+  padding-left: 12px;
+  color: var(--orange);
+}
+
+.quick-link-arrow {
+  font-size: 13px;
+  color: rgba(249,123,58,0.5);
+  transition: transform 0.25s ease, color 0.25s ease;
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+.quick-link:hover .quick-link-arrow {
+  transform: translateX(3px);
+  color: var(--orange);
+}
+
 /* ANIMATIONS */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(24px); }
@@ -664,9 +745,11 @@ footer { flex-wrap: wrap; gap: 12px; }
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
+  .top-bar { padding: 12px 32px; }
   .hero { grid-template-columns: 1fr; }
-  .hero-right { min-height: 200px; }
+  .hero-right { min-height: 360px; padding: 40px 32px; }
   .hero-left { padding: 60px 32px; }
+  .quick-links { width: 100%; max-width: 320px; }
   .stats { grid-template-columns: 1fr; }
   .stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); }
   .stat-num { font-size: 32px; }
@@ -699,42 +782,39 @@ footer { flex-wrap: wrap; gap: 12px; }
 </head>
 <body>
 
+<header class="top-bar">
+  <div class="top-bar-contacts">
+    <a href="tel:+79252177969" class="top-bar-link" onclick="ym(109423563,'reachGoal','phone_click')"><span class="top-bar-icon">📞</span><span>+7 (925) 217-79-69</span></a>
+    <a href="https://t.me/cvikken" class="top-bar-link" target="_blank" rel="noopener"><span class="top-bar-icon">✈️</span><span>@cvikken</span></a>
+  </div>
+</header>
+
 <!-- HERO -->
 <section class="hero">
   <div class="hero-left">
-    <div class="eyebrow">Частный специалист</div>
     <h1>Арсентьева<br><em>Анастасия</em></h1>
     <p class="hero-sub">Согласование перепланировок</p>
     <p class="hero-desc">Согласуем перепланировку вашей квартиры в Москве и Московской области — от первой консультации до готовых документов. Берём на себя всё.</p>
     <div class="hero-cta">
       <a href="#contact" class="btn-primary">Получить консультацию</a>
-      <a href="#services" class="btn-ghost">Наши услуги</a>
     </div>
   </div>
   <div class="hero-right">
     <div class="hero-monogram">
       <div class="hero-monogram-letters">АА</div>
       <div class="hero-monogram-line"></div>
-      <div class="hero-monogram-sub">с 2018 года</div>
+      <div class="hero-monogram-sub">с 2020 года</div>
     </div>
+    <nav class="quick-links">
+      <a href="#pricing" class="quick-link"><span>Стоимость</span><span class="quick-link-arrow">→</span></a>
+      <a href="#services" class="quick-link"><span>Что мы делаем</span><span class="quick-link-arrow">→</span></a>
+      <a href="#how" class="quick-link"><span>Как проходит согласование</span><span class="quick-link-arrow">→</span></a>
+      <a href="#timeline" class="quick-link"><span>Сроки</span><span class="quick-link-arrow">→</span></a>
+      <a href="#contact" class="quick-link"><span>Контакты</span><span class="quick-link-arrow">→</span></a>
+    </nav>
   </div>
 </section>
 
-<!-- STATS -->
-<div class="stats">
-  <div class="stat">
-    <div class="stat-num">7+</div>
-    <div class="stat-label">лет опыта</div>
-  </div>
-  <div class="stat">
-    <div class="stat-num">Москва</div>
-    <div class="stat-label">и Московская область</div>
-  </div>
-  <div class="stat">
-    <div class="stat-num">Сопровождаем</div>
-    <div class="stat-label">на каждом этапе</div>
-  </div>
-</div>
 
 <!-- SERVICES -->
 <section class="services" id="services">
@@ -800,6 +880,39 @@ footer { flex-wrap: wrap; gap: 12px; }
   </div>
 </section>
 
+<!-- HOW IT WORKS -->
+<section class="how" id="how">
+  <div class="section-header">
+    <h2>Как это<br><em>работает</em></h2>
+    <p class="section-desc">Простой и понятный процесс. Вы занимаетесь своими делами — мы занимаемся вашей перепланировкой.</p>
+  </div>
+  <div class="how-steps">
+    <div class="how-step">
+      <div class="how-dot"></div>
+      <div class="how-num">01</div>
+      <div class="how-title">Консультация</div>
+      <p class="how-text">Бесплатно оцениваю вашу ситуацию, говорю что реально согласовать и сколько это стоит.</p>
+    </div>
+    <div class="how-step">
+      <div class="how-dot"></div>
+      <div class="how-num">02</div>
+      <div class="how-title">Договор</div>
+      <p class="how-text">Подписываем договор с оплатой за результат. Каждый этап оплачивается по факту выполнения.</p>
+    </div>
+    <div class="how-step">
+      <div class="how-dot"></div>
+      <div class="how-num">03</div>
+      <div class="how-title">Работа</div>
+      <p class="how-text">Готовим документы, подаём в МЖИ, сопровождаем весь процесс. Держим вас в курсе.</p>
+    </div>
+    <div class="how-step">
+      <div class="how-dot"></div>
+      <div class="how-num">04</div>
+      <div class="how-title">Результат</div>
+      <p class="how-text">Передаём готовые документы. Перепланировка согласована.</p>
+    </div>
+  </div>
+</section>
 <!-- TIMELINE -->
 <section class="how" id="timeline">
   <div class="section-header">
@@ -858,39 +971,6 @@ footer { flex-wrap: wrap; gap: 12px; }
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
-<section class="how" id="how">
-  <div class="section-header">
-    <h2>Как это<br><em>работает</em></h2>
-    <p class="section-desc">Простой и понятный процесс. Вы занимаетесь своими делами — мы занимаемся вашей перепланировкой.</p>
-  </div>
-  <div class="how-steps">
-    <div class="how-step">
-      <div class="how-dot"></div>
-      <div class="how-num">01</div>
-      <div class="how-title">Консультация</div>
-      <p class="how-text">Бесплатно оцениваю вашу ситуацию, говорю что реально согласовать и сколько это стоит.</p>
-    </div>
-    <div class="how-step">
-      <div class="how-dot"></div>
-      <div class="how-num">02</div>
-      <div class="how-title">Договор</div>
-      <p class="how-text">Подписываем договор с оплатой за результат. Каждый этап оплачивается по факту выполнения.</p>
-    </div>
-    <div class="how-step">
-      <div class="how-dot"></div>
-      <div class="how-num">03</div>
-      <div class="how-title">Работа</div>
-      <p class="how-text">Готовим документы, подаём в МЖИ, сопровождаем весь процесс. Держим вас в курсе.</p>
-    </div>
-    <div class="how-step">
-      <div class="how-dot"></div>
-      <div class="how-num">04</div>
-      <div class="how-title">Результат</div>
-      <p class="how-text">Передаём готовые документы. Перепланировка согласована.</p>
-    </div>
-  </div>
-</section>
 
 <!-- CONTACT -->
 <section class="contact" id="contact">
