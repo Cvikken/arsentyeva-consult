@@ -179,6 +179,8 @@ footer { background: #2C1F18; padding: 28px 80px; display: flex; justify-content
   .contact-grid { gap: 24px; }
 }
 </style>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>emailjs.init('r9e70RKYLMRekWeI-');</script>
 </head>
 <body>
 <header class="top-bar">
@@ -434,5 +436,6 @@ footer { background: #2C1F18; padding: 28px 80px; display: flex; justify-content
   <div class="footer-copy">© 2026 · Согласование перепланировок · Москва и МО</div>
   <div class="footer-legal">Арсентьева Анастасия Сергеевна · Самозанятый · ИНН: 773390836005</div>
 </footer>
+<script>document.getElementById('contact-form').addEventListener('submit',function(e){e.preventDefault();var f=this,b=f.querySelector('button[type=submit]'),n=(f.from_name.value||'').trim(),p=(f.phone.value||'').trim(),m=(f.message.value||'').trim(),c=f.consent.checked;function r(t){b.textContent=t;b.style.background='';setTimeout(function(){b.textContent='Получить оценку перепланировки';},3500);}if(!c){r('Нужно согласие на обработку данных');return;}if(!n){r('Укажите ваше имя');f.from_name.focus();return;}if(!p){r('Укажите телефон');f.phone.focus();return;}b.disabled=true;b.textContent='Отправляем...';emailjs.send('service_skq7bpf','template_qjxvfxd',{from_name:n,name:n,phone:p,message:'Телефон: '+p+'\n\n'+(m||'(сообщение не указано)')}).then(function(){b.textContent='Заявка отправлена ✓';b.style.background='#5BAD5B';f.reset();}).catch(function(){b.textContent='Ошибка — попробуйте ещё раз';b.disabled=false;});});</script>
 </body>
 </html>
