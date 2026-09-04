@@ -116,11 +116,7 @@ h2 em { font-style: italic; color: var(--orange); }
 .dash-list li::before { content: '—'; position: absolute; left: 0; color: var(--orange); }
 /* SERVICES */
 .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); }
-.service-card { background: var(--bg); padding: 40px 32px; transition: background 0.3s; cursor: default; }
-.service-card:hover { background: var(--dark); }
-.service-card:hover .service-num { color: rgba(249,123,58,0.15); }
-.service-card:hover .service-title { color: var(--orange); }
-.service-card:hover .service-text { color: rgba(255,255,255,0.5); }
+.service-card { background: var(--bg); padding: 40px 32px; cursor: pointer; }
 .service-num { font-family: 'Playfair Display', serif; font-size: 56px; font-weight: 400; color: var(--border); line-height: 1; margin-bottom: 20px; transition: color 0.3s; }
 .service-title { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 400; color: var(--dark); margin-bottom: 12px; line-height: 1.3; transition: color 0.3s; }
 .service-text { font-size: 13px; line-height: 1.7; color: var(--muted); font-weight: 300; transition: color 0.3s; }
@@ -291,17 +287,17 @@ footer { background: #2C1F18; padding: 28px 80px; display: flex; justify-content
       <p class="section-desc">Работаем по договору. Платите поэтапно — только за результат.</p>
     </div>
     <div class="services-grid">
-      <div class="service-card">
+      <div class="service-card" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">
         <div class="service-num">01</div>
         <div class="service-title">Планирую ремонт</div>
         <p class="service-text">Хотите перенести перегородку, изменить дверной проём или объединить помещения? Проверим, можно ли это согласовать, и подготовим документы до начала ремонта.</p>
       </div>
-      <div class="service-card">
+      <div class="service-card" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">
         <div class="service-num">02</div>
         <div class="service-title">Уже сделал перепланировку</div>
         <p class="service-text">Ремонт закончен, но документы не оформлены? Разберём ситуацию и поможем привести всё в порядок.</p>
       </div>
-      <div class="service-card">
+      <div class="service-card" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">
         <div class="service-num">03</div>
         <div class="service-title">Покупаю квартиру</div>
         <p class="service-text">В квартире уже есть перепланировка? Проверим документы до покупки, чтобы вы заранее знали о возможных рисках.</p>
